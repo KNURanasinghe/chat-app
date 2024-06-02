@@ -2,7 +2,7 @@ import 'package:chat_app/utils/navigation/custom_navigation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 
-import '../conversation/conversation.dart';
+import '../home/conversation/conversation.dart';
 
 class SignInPage extends StatefulWidget {
   const SignInPage({super.key});
