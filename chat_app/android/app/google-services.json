@@ -12,7 +12,20 @@
           "package_name": "lk.nur.mychat"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "765914327941-pqm6odo0k7dlvclct37rrnqip76fa4ba.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "lk.nur.mychat",
+            "certificate_hash": "c2081636a2727013d4b837a702162a92259e8a53"
+          }
+        },
+        {
+          "client_id": "765914327941-u48ndfqb7925ilbbj9mkj2b2pbuhhn2m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyAgdgx4VxnocQwp5uSuHqS1xiiO_5K7fS8"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "765914327941-u48ndfqb7925ilbbj9mkj2b2pbuhhn2m.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "765914327941-tleh8umpjrc65ipo4kf7elugi7nr30hl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.chatApp"
+              }
+            }
+          ]
         }
       }
     }

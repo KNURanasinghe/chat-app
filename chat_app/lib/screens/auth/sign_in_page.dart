@@ -1,11 +1,12 @@
 import 'package:chat_app/components/customButton.dart';
 import 'package:chat_app/screens/auth/loginPage.dart';
-import 'package:chat_app/utils/navigation/custom_navigation.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
-
+import 'package:provider/provider.dart';
+import 'package:chat_app/providers/auth_Providers.dart';
 import '../../components/customTextField.dart';
-import '../home/conversation/conversation.dart';
+
 
 class SignInPage extends StatefulWidget {
   const SignInPage({super.key});
@@ -57,7 +58,7 @@ class _SignInPageState extends State<SignInPage> {
               Buttons.Google,
               text: "Sign up with Google",
               onPressed: () {
-                CustomNavigation.nextPage(context, const ConversationScreen());
+                Provider.of<AuthProviders>(context, listen: false).signInWithGoogle();
               },
             ),
           ],

@@ -1,8 +1,9 @@
 import 'dart:async';
 
+import 'package:chat_app/providers/auth_Providers.dart';
 import 'package:chat_app/utils/navigation/custom_navigation.dart';
 import 'package:flutter/material.dart';
-
+import 'package:provider/provider.dart';
 import '../auth/sign_in_page.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -26,7 +27,8 @@ class _SplashScreenState extends State<SplashScreen> {
     // });
 
     Timer(const Duration(seconds: 3), () {
-      CustomNavigation.nextPage(context, const SignInPage());
+      Provider.of<AuthProviders>(context, listen: false).listnToAuthUser(context);
+      
     });
   }
 
