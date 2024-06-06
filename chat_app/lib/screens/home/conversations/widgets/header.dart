@@ -1,7 +1,6 @@
+import 'package:chat_app/providers/auth_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
-import '../../../providers/auth_Providers.dart';
 
 class Header extends StatelessWidget {
   const Header({
@@ -15,24 +14,25 @@ class Header extends StatelessWidget {
         Row(
           children: [
             Text(
-              "Chat app",
+              "My Chat",
               style: TextStyle(
                 fontSize: 28,
                 color: Colors.grey.shade800,
-                fontWeight: FontWeight.w800,
+                fontWeight: FontWeight.w600,
               ),
             ),
             const Spacer(),
-            GestureDetector(
-              onTap: () {
-                Provider.of<AuthProviders>(context, listen: false)
-                    .userSignOut();
-              },
-              child: CircleAvatar(
-                  radius: 16,
-                  backgroundImage: NetworkImage(
-                      Provider.of<AuthProviders>(context).user!.photoURL!)),
+            CircleAvatar(
+              radius: 16,
+              backgroundImage: NetworkImage(
+                  Provider.of<AuthUProvider>(context).user!.photoURL!),
             ),
+            IconButton(
+                onPressed: () {
+                  Provider.of<AuthUProvider>(context, listen: false)
+                      .signOut(context);
+                },
+                icon: const Icon(Icons.exit_to_app))
           ],
         ),
         const Divider(),
